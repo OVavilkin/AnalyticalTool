@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2b18d9e2-b6c8-44e7-a918-f3b7d1a908aa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/AnalyticalToolForFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/AnalyticalToolForStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AnalyticalTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/AnalyticalTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/AbstractQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/AbstractQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/CQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/CQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/DQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/DQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/QueryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/QueryProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/category/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/category/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/queries/category/CategoryProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/associal/analyticaltool/queries/category/CategoryProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AnalyticalToolTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/AnalyticalToolTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CategoryProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/CategoryProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/CategoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/CategoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/DQueryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/DQueryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/QueryProviderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/net/associal/analyticaltool/QueryProviderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/AnalyticalTool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/AbstractQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/CQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/DQuery.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/QueryProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/category/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/queries/category/CategoryProvider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/AnalyticalToolTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/CategoryProviderTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/CategoryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/DQueryTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/org/example/QueryProviderTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2NS66OMdxf0rrLR1RJ4OwxBatjN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Maven.AnalyticalTool [package]">
+    <configuration name="AnalyticalToolTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnalyticalTool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.associal.analyticaltool.AnalyticalTool" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.associal.analyticaltool" />
+      <option name="MAIN_CLASS_NAME" value="net.associal.analyticaltool.AnalyticalToolTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnalyticalTool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.associal.analyticaltool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.associal.analyticaltool" />
+      <option name="MAIN_CLASS_NAME" value="net.associal.analyticaltool.AppTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QueryProviderTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AnalyticalTool" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="net.associal.analyticaltool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="net.associal.analyticaltool" />
+      <option name="MAIN_CLASS_NAME" value="net.associal.analyticaltool.QueryProviderTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AnalyticalTool [package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="package" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.AnalyticalToolTest" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.QueryProviderTest" />
+      <item itemvalue="Maven.AnalyticalTool [package]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.QueryProviderTest" />
+        <item itemvalue="JUnit.AnalyticalToolTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b18d9e2-b6c8-44e7-a918-f3b7d1a908aa" name="Changes" comment="" />
+      <created>1679644968364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1679644968364</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
