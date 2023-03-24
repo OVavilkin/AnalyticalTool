@@ -7,7 +7,7 @@
  * java -cp file.jar net.associal.anylyticaltool.App [inputFile [outputFile [errorFile]]] <br/>
  * <br/>
  * As console application, you can pipe input to: <br/>
- * cat inputFile | java -cp net.associal.analyticaltool.App [ > outputFile [ 2> errorFile ]] <br/>
+ * cat inputFile | java -cp file.jar net.associal.analyticaltool.App [ > outputFile [ 2> errorFile ]] <br/>
  * <br/>
  * @author Alexey Vavilkin <br/>
  */
