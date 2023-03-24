@@ -5,6 +5,10 @@ import net.associal.analyticaltool.queries.category.Category;
 import java.time.LocalDate;
 import java.util.Arrays;
 
+/**
+ * Abstract class, parent for CQuery and DQuery <br/>
+ * Holds variables every query should have. <br/>
+ */
 public class AbstractQuery {
     private int num;
     private Category service;
@@ -12,6 +16,14 @@ public class AbstractQuery {
     private boolean first;
     private LocalDate date;
 
+    /**
+     * Create AbstractQuery. Used by super() in CQuery and DQuery <br/>
+     * @param num <br/>
+     * @param service <br/>
+     * @param question <br/>
+     * @param firs          if "P" then true, if "N" then false <br/>
+     * @param date <br/>
+     */
     public AbstractQuery(int num, Category service, Category question, boolean first, LocalDate date) {
         this.num = num;
         this.service = service;
@@ -40,6 +52,10 @@ public class AbstractQuery {
         return date;
     }
 
+    /**
+     * Simple hack for debugging purposes <br/>
+     * @return String, representing the AbstractQuery <br/>
+     */
     @Override
     public String toString() {
         return "AbstractQuery{" +

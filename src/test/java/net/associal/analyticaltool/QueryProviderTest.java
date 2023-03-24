@@ -6,7 +6,7 @@ import net.associal.analyticaltool.queries.DQuery;
 import net.associal.analyticaltool.queries.QueryProvider;
 import org.junit.Test;
 
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -34,12 +34,13 @@ public class QueryProviderTest
         assertTrue(Arrays.equals(c.getQuestion().getCategories(), new Integer[] {8, 15, 1}));
         assertTrue( c.isFirst() );
         assertTrue( c.getDate().compareTo(LocalDate.parse("15.10.2012", formatter)) == 0);
-        assertTrue(c.getSeconds() == 83);
+        assertTrue(c.getMinutes() == 83);
 
     }
 
     @Test
-    public void wrongD1date() {
+    public void wrongD1date() throws IOException {
+        // TODO: catch error stream and check the log
         AbstractQuery a = QueryProvider.fromLine("D 1.1 8 P 99.99.2012-01.12.2012");
         assertTrue(a == null);
     }
@@ -109,7 +110,7 @@ public class QueryProviderTest
         assertTrue( aList.size() == 1);
         assertTrue( aList.get(0) instanceof CQuery);
         CQuery c = (CQuery) aList.get(0);
-        assertTrue(c.getSeconds() == 83);
+        assertTrue(c.getMinutes() == 83);
     }
 
     @Test
@@ -139,7 +140,7 @@ public class QueryProviderTest
         assertTrue( aList.size() == 2);
         assertTrue( aList.get(0) instanceof CQuery);
         CQuery c = (CQuery) aList.get(0);
-        assertTrue(c.getSeconds() == 83);
+        assertTrue(c.getMinutes() == 83);
     }
 
     @Test
@@ -177,7 +178,7 @@ public class QueryProviderTest
         List<AbstractQuery> aList = aStream.collect(Collectors.toList());
         assertTrue( aList.size() == 7);
         CQuery c = (CQuery) aList.get(0);
-        assertTrue(c.getSeconds() == 83);
+        assertTrue(c.getMinutes() == 83);
 
         DQuery d = (DQuery) aList.get(3);
         assertTrue( d.getEnd().compareTo(LocalDate.parse("01.12.2012", formatter)) == 0);

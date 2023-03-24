@@ -5,8 +5,18 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * Represents Factory for Categories <br/>
+ * Takes a String value and parses it <br/>
+ */
 public class CategoryProvider {
 
+    /**
+     * Creates a Category based on String provided <br/>
+     * @param s <br/>
+     * Examples: "*", "1", "1.2" <br/>
+     * @return Category <br/>
+     */
     public static Category from(String s) {
         if(s.startsWith("*"))
             return new Category(true);

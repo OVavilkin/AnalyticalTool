@@ -8,38 +8,32 @@ import java.util.logging.LogManager;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
+/**
+ * Main class to use the Analytical Tool.
+ */
 public class App 
 {
+    /**
+     * Entrance of the console program <br/>
+     * <br/>
+     * @param args [inputFile [, outputFile [, errorFile]]] <br/>
+     *             if no params provided then tries to use input/output/err streams <br/>
+     * @throws IOException mainly if error while writing to a stream <br/>
+     */
     public static void main( String[] args ) throws IOException {
         String inputFile = null;
         String outputFile = null;
-        String errorFile = null;
+        String errorFile;
 
         switch(args.length) {
             default:
-                /*
-                InputStreamReader inStream = new InputStreamReader(System.in);
-                System.out.println("Stream is ready: " + inStream.ready());
-                if(!inStream.ready()) {
-                    Logger.getLogger("net.associal.analyticaltool").
-                            severe("No input found!");
-                    System.out.println("Usage:");
-                    System.out.println("java -cp file.jar net.associal.anylyticaltool.App "
-                            + "[inputFile [outputFile [errorFile]]]");
-                    System.out.println("\nor");
-                    System.out.println("cat inputFile | java -cp net.associal.analyticaltool.App");
-                }
-                inStream.close();
-                return;
-
-                 */
-                System.out.println("No input...");
                 break;
             case 3:
                 errorFile = args[2];
                 FileHandler logFile = new FileHandler(errorFile);
                 logFile.setFormatter(new SimpleFormatter());
                 Logger logger = Logger.getLogger("net.associal.analyticaltool");
+                // TODO: change logging level based on input parameter #4
 
                 //disable logging to console if errorFile is provided
                 logger.setUseParentHandlers(false);
@@ -51,10 +45,9 @@ public class App
                 if(!Files.exists(Paths.get(inputFile))) {
                     Logger.getLogger("net.associal.analyticaltool")
                             .severe("Please provide valid input file, you provided: " + inputFile);
-                    inputFile = null;
+                    // interrupt program
+                    return;
                 }
-            case 0:
-                break;
         }
 
         try {
@@ -63,7 +56,6 @@ public class App
             Logger.getLogger("net.associal.analyticaltool")
                     .severe(e.getMessage());
 
-            //we are not able to handle runtime exceptions, interrupt program.
             throw e;
         }
     }

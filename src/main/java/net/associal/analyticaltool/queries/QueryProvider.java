@@ -16,10 +16,30 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.groupingBy;
 
+/**
+ * Represents a Factory providing Queries based on input <br/>
+ * Variants are <br/>
+ * from(String list) (for testing), from(Stream lines) - get multiple queries <br/>
+ * fromLine(String line) - get single query <br/>
+ */
 public class QueryProvider {
 
     private static int counter;
 
+    /**
+     * Generate a stream of Queries based on input text <br/>
+     * Used mainly for testing <br/>
+     * <br/>
+     * @param list "newline" separated list <br/>
+     *             Example: <br/>
+     * 3 <br/>
+     * C 1.1 8.15.1 P 15.10.2012 83 <br/>
+     * C 1 10.1 P 01.12.2012 65 <br/>
+     * C 1.1 5.5.1 P 01.11.2012 117 <br/>
+     *
+     * @return Stream of Queries <br/>
+     * @throws IOException if BufferedReader failed to read from stream generated in process <br/>
+     */
     public static Stream<AbstractQuery> from(String list) throws IOException {
 
         // we would use list.lines() if we were on java 11+
@@ -31,19 +51,34 @@ public class QueryProvider {
                 .filter(q -> q.length() > 1)
                 .map(QueryProvider::fromLine)
                 .limit(total);
-                //.collect(groupingBy(q -> q.getClass()));
     }
 
     /**
-     *
-     * @param lines in C/D query format
-     * @return stream of AbstractQuery elements
+     * Generate Query stream based on input text <br/>
+     *  <br/>
+     * @param lines in C/D query format <br/>
+     *              Example: <br/>
+     * C 1.1 8.15.1 P 15.10.2012 83 <br/>
+     * C 1 10.1 P 01.12.2012 65 <br/>
+     * C 1.1 5.5.1 P 01.11.2012 117 <br/>
+     *              Please note: first line is a Query, not total number of queries <br/>
+     * <br/>
+     * @return stream of Query elements <br/>
      */
     public static Stream<AbstractQuery> from(Stream<String> lines) {
         return lines
                 .map(QueryProvider::fromLine);
     }
 
+    /**
+     * Create either D Query or C Query based on input <br/>
+     * throws nothing since we want to proceed if some queries hold bad data <br/>
+     * <br/>
+     * @param line String representing the query <br/>
+     *             Example: <br/>
+     *             C 1.1 8.15.1 P 15.10.2012 83 <br/>
+     * @return either D Query or C Query <br/>
+     */
     public static AbstractQuery fromLine(String line) {
         String regex = "^([C|D]) (\\*|\\d{1,}(?:\\.\\d{1,})*) (\\*|\\d{1,}(?:\\.\\d{1,})*) ([P|N]) (.*)$";
         Pattern p = Pattern.compile(regex);
