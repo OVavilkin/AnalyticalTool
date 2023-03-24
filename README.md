@@ -21,4 +21,4 @@ To build the project use <br>
   mvn package <br>
    <br>
    <br>
-For details on the API please refer to <a href="https://github.com/OVavilkin/AnalyticalTool/blob/main/target/site/apidocs/index.html">API Documentation</a> <br>
+For details on the API please refer to <a href="https://github.com/OVavilkin/AnalyticalTool/blob/main/target/site/apidocs/">API Documentation</a> <br>
