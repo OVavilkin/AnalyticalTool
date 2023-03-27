@@ -1,2 +1,4 @@
-ignore
-target
+ignore/output
+ignore/error
+target/*
+!target/site
