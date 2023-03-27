@@ -33,7 +33,6 @@ public class CategoryProviderTest
     {
         Category category = CategoryProvider.from("1.2");
         assertTrue( category.getCategories()[0] == 1 );
-        System.out.println(Arrays.toString(category.getCategories()));
         assertTrue( category.getCategories()[1] == 2 );
     }
 

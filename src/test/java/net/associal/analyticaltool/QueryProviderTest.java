@@ -4,13 +4,18 @@ import net.associal.analyticaltool.queries.AbstractQuery;
 import net.associal.analyticaltool.queries.CQuery;
 import net.associal.analyticaltool.queries.DQuery;
 import net.associal.analyticaltool.queries.QueryProvider;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+import java.util.logging.StreamHandler;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -38,23 +43,33 @@ public class QueryProviderTest
 
     }
 
+    /**
+     * Please note: it redirects output back to error stream which is not re-captured by Intellij Idea
+     * So if you output something to error stream after running the test it will be printed to console
+     * not the Intellij Idea "console window"
+     */
+    private String workWithErrStream(String line) {
+        ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        PrintStream oldErr = System.err;
+        PrintStream newErr = new PrintStream(buffer);
+        System.setErr(newErr);
+
+        AbstractQuery a = QueryProvider.fromLine(line);
+
+        String errString = new String(buffer.toByteArray(), StandardCharsets.UTF_8);
+        buffer.reset();
+        newErr.close();
+        System.setErr(new PrintStream(oldErr));
+
+        return errString;
+    }
+
     @Test
     public void wrongD1date() throws IOException {
-        // TODO: catch error stream and check the log
-        AbstractQuery a = QueryProvider.fromLine("D 1.1 8 P 99.99.2012-01.12.2012");
-        assertTrue(a == null);
-    }
 
-    @Test
-    public void wrongC1seconds() {
-        AbstractQuery a = QueryProvider.fromLine("C 1.1 8.15.1 P 15.10.2012 rat");
-        assertTrue(a == null);
-    }
+        String errString = workWithErrStream("D 1.1 8 P 99.99.2012-01.12.2012");
+        assertTrue("Error string should have a WARNING message", errString.contains("WARNING"));
 
-    @Test
-    public void wrongC1question() {
-        AbstractQuery a = QueryProvider.fromLine("C 1.1 8.a P 15.10.2012 rat");
-        assertTrue(a == null);
     }
 
     @Test

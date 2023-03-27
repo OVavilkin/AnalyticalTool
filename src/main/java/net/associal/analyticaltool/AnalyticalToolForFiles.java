@@ -38,7 +38,7 @@ public interface AnalyticalToolForFiles {
                         "No input found!"
                                 + "\nUsage:"
                                 + "\njava -cp file.jar net.associal.anylyticaltool.App "
-                                + "[inputFile [outputFile [errorFile]]]"
+                                + "[inputFile [outputFile [errorFile [ logLevel]]]]"
                                 + "\nor"
                                 + "\ncat inputFile | java -cp file.jar net.associal.analyticaltool.App [ > outputFile "
                         + "[ 2> errorFile ]]"

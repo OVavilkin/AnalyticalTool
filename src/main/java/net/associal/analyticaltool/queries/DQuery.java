@@ -3,6 +3,8 @@ package net.associal.analyticaltool.queries;
 import net.associal.analyticaltool.queries.category.Category;
 
 import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * D Queries <br/><br/>
@@ -46,6 +48,14 @@ public class DQuery extends AbstractQuery {
         return end;
     }
 
+    @Override
+    public String toString() {
+        return "DQuery{" +
+                super.toString() +
+                " end=" + end +
+                '}';
+    }
+
     /**
      * Perform check on 5 parameters <br/>
      *  <br/>
@@ -58,12 +68,17 @@ public class DQuery extends AbstractQuery {
      * @return boolean true if all matched <br/>
      */
     public boolean matches(CQuery cQuery) {
+        Logger.getLogger("net.associal.analyticaltool")
+                .log(Level.FINEST,
+                        "Checking CQuery to match DQuery\n"
+                        + this.toString() + "\n"
+                        + cQuery.toString()
+                );
         return (cQuery.getNum() < this.getNum())
                 && this.getService().matches(cQuery.getService())
                 && this.getQuestion().matches(cQuery.getQuestion())
                 && (Boolean.compare(this.isFirst(), cQuery.isFirst()) == 0)
                 && (cQuery.getDate().compareTo(this.getDate()) >= 0)
                 && (cQuery.getDate().compareTo(end) <= 0);
-
     }
 }

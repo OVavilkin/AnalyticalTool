@@ -36,4 +36,12 @@ public class CQuery extends AbstractQuery {
     public int getMinutes() {
         return minutes;
     }
+
+    @Override
+    public String toString() {
+        return "CQuery{" +
+                super.toString() +
+                " minutes=" + minutes +
+                '}';
+    }
 }

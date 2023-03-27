@@ -3,10 +3,7 @@ package net.associal.analyticaltool;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.logging.FileHandler;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
+import java.util.logging.*;
 
 /**
  * Main class to use the Analytical Tool.
@@ -24,16 +21,40 @@ public class App
         String inputFile = null;
         String outputFile = null;
         String errorFile;
+        String logLevel = null;
+
+        //TODO: change input for the program so it is more unix style
+        // example: -i inputFile
+        //          -o outputFile
+        //          -e errorFile
+        //          -l logLevel
 
         switch(args.length) {
             default:
                 break;
+            case 4:
+                logLevel = args[3];
             case 3:
                 errorFile = args[2];
                 FileHandler logFile = new FileHandler(errorFile);
                 logFile.setFormatter(new SimpleFormatter());
                 Logger logger = Logger.getLogger("net.associal.analyticaltool");
-                // TODO: change logging level based on input parameter #4
+
+                // logLevel provided earlier, we should set it now or print Usage information.
+                if(logLevel != null) {
+                    try {
+                        logger.setLevel(Level.parse(logLevel));
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Usage: log level one of below");
+                        System.out.println("SEVERE (highest value)\n" +
+                                "WARNING\n" +
+                                "INFO\n" +
+                                "CONFIG\n" +
+                                "FINE\n" +
+                                "FINER\n" +
+                                "FINEST (lowest value)");
+                    }
+                }
 
                 //disable logging to console if errorFile is provided
                 logger.setUseParentHandlers(false);

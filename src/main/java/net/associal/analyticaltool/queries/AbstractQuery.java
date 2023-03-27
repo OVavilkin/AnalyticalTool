@@ -58,8 +58,7 @@ public class AbstractQuery {
      */
     @Override
     public String toString() {
-        return "AbstractQuery{" +
-                "num=" + num +
+        return "num=" + num +
                 ", service=" + Arrays.toString(service.getCategories()) +
                 ", question=" + Arrays.toString(question.getCategories()) +
                 ", first=" + first +
